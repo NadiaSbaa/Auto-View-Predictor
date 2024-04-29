@@ -1,0 +1,27 @@
+2024-04-29 00:08:21 INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-29 00:08:21 INFO     [33mPress CTRL+C to quit[0m
+2024-04-29 00:08:24 INFO     Request received - Data_path: /Users/nsbaa/Desktop/CodingChallenge_CV/data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg
+2024-04-29 00:08:24 INFO     Prediction made - Predicted scores: {'/Users/nsbaa/Desktop/CodingChallenge_CV/data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg': [0.2034134715795517, 0.3055709898471832]}
+2024-04-29 00:08:24 INFO     127.0.0.1 - - [29/Apr/2024 00:08:24] "GET /predict HTTP/1.1" 200 -
+2024-04-29 00:08:29 INFO     Request received - Data_path: /Users/nsbaa/Desktop/CodingChallenge_CV/data/test/
+2024-04-29 00:08:29 INFO     Prediction made - Predicted scores: {'/Users/nsbaa/Desktop/CodingChallenge_CV/data/test/0a9a0202-d22e-447b-9be5-f922bd7d9116.jpg': [0.594847559928894, 0.282612144947052], '/Users/nsbaa/Desktop/CodingChallenge_CV/data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg': [0.0515524186193943, 0.3006758391857147]}
+2024-04-29 00:08:29 INFO     127.0.0.1 - - [29/Apr/2024 00:08:29] "GET /predict HTTP/1.1" 200 -
+2024-04-29 00:30:36 INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-29 00:30:36 INFO     [33mPress CTRL+C to quit[0m
+2024-04-29 00:30:43 INFO     Request received - Data_path: /Users/nsbaa/Desktop/CodingChallenge_CV/data/test/
+2024-04-29 00:30:43 INFO     Prediction made - Predicted scores: {'/Users/nsbaa/Desktop/CodingChallenge_CV/data/test/0a9a0202-d22e-447b-9be5-f922bd7d9116.jpg': [0.594847559928894, 0.282612144947052], '/Users/nsbaa/Desktop/CodingChallenge_CV/data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg': [0.0515524186193943, 0.3006758391857147]}
+2024-04-29 00:30:43 INFO     127.0.0.1 - - [29/Apr/2024 00:30:43] "GET /predict HTTP/1.1" 200 -
+2024-04-29 11:04:45 INFO     [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-29 11:04:45 INFO     [33mPress CTRL+C to quit[0m
+2024-04-29 11:04:49 INFO     Request received - Data_path: /Users/nsbaa/Desktop/CodingChallenge_CV/data/test/
+2024-04-29 11:04:49 ERROR    Validation error: Invalid data_path value. Directory or File does not exist
+2024-04-29 11:04:49 INFO     127.0.0.1 - - [29/Apr/2024 11:04:49] "[31m[1mGET /predict HTTP/1.1[0m" 400 -
+2024-04-29 11:05:13 INFO     Request received - Data_path: /Users/nsbaa/Desktop/Perspectives_Score_Predictor/data/test/
+2024-04-29 11:05:13 INFO     Prediction made - Predicted scores: {'/Users/nsbaa/Desktop/Perspectives_Score_Predictor/data/test/0a9a0202-d22e-447b-9be5-f922bd7d9116.jpg': [0.594847559928894, 0.282612144947052], '/Users/nsbaa/Desktop/Perspectives_Score_Predictor/data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg': [0.0515524186193943, 0.3006758391857147]}
+2024-04-29 11:05:13 INFO     127.0.0.1 - - [29/Apr/2024 11:05:13] "GET /predict HTTP/1.1" 200 -
+2024-04-29 11:06:14 INFO     Request received - Data_path: /Users/nsbaa/Desktop/Perspectives_Score_Predictor/data/test/
+2024-04-29 11:06:15 INFO     Prediction made - Predicted scores: {'/Users/nsbaa/Desktop/Perspectives_Score_Predictor/data/test/0a9a0202-d22e-447b-9be5-f922bd7d9116.jpg': [0.594847559928894, 0.282612144947052], '/Users/nsbaa/Desktop/Perspectives_Score_Predictor/data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg': [0.0515524186193943, 0.3006758391857147]}
+2024-04-29 11:06:15 INFO     127.0.0.1 - - [29/Apr/2024 11:06:15] "GET /predict HTTP/1.1" 200 -
