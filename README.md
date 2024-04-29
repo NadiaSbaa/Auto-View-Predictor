@@ -7,7 +7,79 @@ Es verwendet ein vortrainiertes Modell zur Analyse von Textdaten und gibt basier
 The Perspective Score Predictor is an application that provides a simple endpoint for predicting perspective scores on car images.
 It uses a pre-trained model to analyze text data and return predicted scores based on various perspectives.
 
+## Funktionen
 
+- **Prediction Endpoint**: Stellt einen Endpunkt zur Vorhersage von Perspektivbewertungen auf Eingabedaten bereit.
+- **Datenvalidierung**:Validiert Eingabedaten, um sicherzustellen, dass sie das erforderliche Format und die Kriterien erfüllen.
+- **Logging**: Logs Anfragen, Validierungsfehler und Vorhersagen zu Überwachungs- und Debugging-Zwecken.
+
+## Installation
+
+Um den Perspective Score Predictor lokal auszuführen, befolgen Sie diese Schritte:
+
+1. Klone das Repository:
+
+    ```bash
+    git clone git@github.com:NadiaSbaa/Perspectives_Score_Predictor.git
+    ```
+
+2. Navigiere zum Projektverzeichnis:
+
+    ```bash
+    cd Perspectives_Score_Predictor
+    ```
+
+3. Installiere dependencies:
+     ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Starte die App:
+     ```bash
+    flask run
+    ```
+
+### Verwendung
+
+#### Vorhersage-Endpunkt
+Der Vorhersage-Endpunkt kann über HTTP-POST-Anforderung erreicht werden. Er akzeptiert ein JSON-Objekt, das den Pfad zu den zu analysierenden Daten enthält.
+
+- **GET /predict**:  Vorhersage von Perspektivbewertungen der Eingabedaten
+
+  - **Request Parameters**:
+    - `data_path` (string): Bilddateipfad (Format: '.png', '.jpg', '.jpeg', '.gif', '.bmp') oder Verzeichnispfad
+
+  - **Antwort**:
+      ```json
+      {
+    "Predicted scores": {
+        "image_path1": [
+            perspective_score_hood,
+            perspective_score_backdoor_left
+        ],
+          "image_path2": [
+            perspective_score_hood,
+            perspective_score_backdoor_left
+        ],
+    }
+
+  - **Beispielanfrage**:
+      ```bash
+      curl -X GET -H "Content-Type: application/json" -d '{"data_path": "data/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg}' http://127.0.0.1:5000/predict
+      ```
+
+  - **Fehlerbehandlung**:
+    - Wenn der Parameter `data_path`  fehlt oder leer ist:
+      - Fehlermeldung: `Missing / Empty parameter: data_path`
+
+    - Wenn `data_path` ungültig ist / nicht existiert:
+      - Fehlermeldung: `Invalid data_path value. Directory or File does not exist`
+
+### Test
+- Führe Tests aus:
+     ```bash
+    pytest
+    ```
   
 
 ## Training
