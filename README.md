@@ -1,86 +1,6 @@
 # Perspectives Score Predictor
-
-
-Der Perspective Score Predictor ist eine Anwendung, die einen einfachen Endpunkt zur Vorhersage von Perspektivbewertungen auf Autobildern bereitstellt.
-Es verwendet ein vortrainiertes Modell zur Analyse von Bilddaten und gibt basierend auf verschiedenen Perspektiven vorhergesagte Bewertungen zurück.
-<br>
-**[ENG]** The Perspective Score Predictor is an application that provides a simple endpoint for predicting perspective scores on car images.
+The Perspective Score Predictor is an application that provides a simple endpoint for predicting perspective scores on car images.
 It uses a pre-trained model to analyze image data and return predicted scores based on various perspectives.
-
-## Funktionen
-
-- **Prediction Endpoint**: Stellt einen Endpunkt zur Vorhersage von Perspektiv Scores auf Eingabedaten bereit.
-- **Datenvalidierung**: Validiert Eingabedaten, um sicherzustellen, dass sie das erforderliche Format und die Kriterien erfüllen.
-- **Logging**: Logs Anfragen, Validierungsfehler und Vorhersagen zu Überwachungs- und Debugging-Zwecken.
-
-## Installation
-
-Um den Perspective Score Predictor lokal auszuführen, befolgen Sie diese Schritte:
-
-1. Klone das Repository:
-
-    ```bash
-    git clone git@github.com:NadiaSbaa/Perspectives_Score_Predictor.git
-    ```
-
-2. Navigiere zum Projektverzeichnis:
-
-    ```bash
-    cd Perspectives_Score_Predictor
-    ```
-
-3. Installiere dependencies:
-     ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Starte die App:
-     ```bash
-    flask run
-    ```
-
-### Verwendung
-
-#### Vorhersage-Endpunkt
-Der Vorhersage-Endpunkt kann über HTTP-POST-Anforderung erreicht werden. Er akzeptiert ein JSON-Objekt, das den Pfad zu den zu analysierenden Daten enthält.
-
-- **GET /predict**:  Vorhersage von Perspektivbewertungen der Eingabedaten
-
-  - **Request Parameters**:
-    - `data_path` (string): Bildfilepath (Format: '.png', '.jpg', '.jpeg', '.gif', '.bmp') oder Verzeichnispath
-
-  - **Antwort**:
-      ```json
-      {
-    "Predicted scores": {
-        "image_path1": [
-            perspective_score_hood,
-            perspective_score_backdoor_left
-        ],
-          "image_path2": [
-            perspective_score_hood,
-            perspective_score_backdoor_left
-        ],
-    }
-
-  - **Beispielanfrage**:
-      ```bash
-      curl -X GET -H "Content-Type: application/json" -d '{"data_path": "data/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg}' http://127.0.0.1:5000/predict
-      ```
-
-  - **Fehlerbehandlung**:
-    - Wenn der Parameter `data_path`  fehlt oder leer ist:
-      - Fehlermeldung: `Missing / Empty parameter: data_path`
-
-    - Wenn `data_path` ungültig ist / nicht existiert:
-      - Fehlermeldung: `Invalid data_path value. Directory or File does not exist`
-
-### Test
-- Führe Tests aus:
-     ```bash
-    pytest
-    ```
-  
 
 ## Training
 The model used in this application was inspired by the following papers:
@@ -141,16 +61,6 @@ After evaluation of the ResNet18, Inception_v3, EfficientNet_b0, and ViT_b_16 ba
 The regression model seems to perform reasonably well. The MSE, MAE, and RMSE are relatively low, indicating that the model's predictions are close to the actual values. Additionally, the R-squared value of 0.747 indicates a good fit between predicted and actual values, suggesting that the model captures a significant portion of the variance in the data.
 
 However, it's important to note that we need to be careful of potential issues such as data imbalance or bias during further evaluation and tuning.
-
-## Model Optimization 
-
-### Note
-
-Die vorgeschlagene App dient als Proof of Concept und ist nicht für den Einsatz als produktionsfähiges Modell gedacht.
-Weitere Verfeinerungen und Optimierungen sind für den Einsatz in realen Anwendungen erforderlich.
-<br>
-**[ENG]** The proposed app serves as a proof of concept and is not intended to be a production-ready model.
-Further refinement and optimization are necessary for deployment in real-world applications.
 
 ### Model Optimization Suggestions (To do)
 1. **Hyperparameter Tuning**: Conduct a more extensive hyperparameter search to fine-tune the model's performance and consider **increasing the number of epochs** for training.
