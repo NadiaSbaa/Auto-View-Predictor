@@ -39,7 +39,7 @@ def dummy_data_path(tmp_path):
     Returns:
         str: Path to the dummy data file.
     """
-    return "data/test/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg"
+    return "tests/data/0a1d0d53-eaa4-4f42-9ea7-2197bd183520.jpg"
 
 
 def test_predict_scores(dummy_data_path):
