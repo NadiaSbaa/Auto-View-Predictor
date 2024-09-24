@@ -1,4 +1,4 @@
-# Perspectives Score Predictor
+# Auto View Predictor
 The Perspective Score Predictor is an application that provides a simple endpoint for predicting perspective scores on car images.
 It uses a pre-trained model to analyze image data and return predicted scores based on various perspectives.
 
